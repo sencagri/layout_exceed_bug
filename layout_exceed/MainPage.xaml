@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="layout_exceed.MainPage">
+    <CollectionView ItemsSource="{Binding ViewItems}" ItemSizingStrategy="MeasureFirstItem">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="25" />
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="5" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="75" />
+                        <ColumnDefinition Width="75" />
+                        <ColumnDefinition Width="100" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer ></TapGestureRecognizer>
+                        <SwipeGestureRecognizer Direction="Right"></SwipeGestureRecognizer>
+                        <SwipeGestureRecognizer Direction="Left" ></SwipeGestureRecognizer>
+                    </Grid.GestureRecognizers>
+                    <Border Grid.Row="0" Grid.Column="0" Grid.RowSpan="4" BackgroundColor="Transparent" Padding="3">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="0,10,0,0" />
+                        </Border.StrokeShape>
+                        <Grid RowDefinitions="*,20" BackgroundColor="Transparent">
+                            <Label Grid.Row="0" VerticalTextAlignment="Start" BackgroundColor="Transparent" LineBreakMode="WordWrap" TextTransform="Uppercase"
+                    Text="{Binding Test1}" FontAttributes="Bold" TextDecorations="None"  
+                     />
+                            <Label Grid.Row="1"
+                    Text="12345623412"
+                     MaxLines="1"
+                    />
+                        </Grid>
+                    </Border>
+                    <Label Grid.Row="0" Grid.Column="1"
+            Text="123,12"
+            FontAttributes="Bold" HorizontalTextAlignment="End"></Label>
+                    <Label Grid.Row="1" Grid.Column="1"
+            Text="USD" 
+                           ></Label>
+                    <Label Grid.Row="2" Grid.Column="1"
+            Text="%10"
+                           />
+                    <Label Grid.Row="3" Grid.Column="1"
+            Text="bas" HorizontalTextAlignment="End"
+                           />
+                    <Label Grid.Row="0" Grid.Column="2"
+            Text="12,00" 
+            FontAttributes="Bold" HorizontalTextAlignment="End"
+                           ></Label>
+                    <Label Grid.Row="1" Grid.Column="2"
+            Text="asd"
+             HorizontalTextAlignment="End"
+                           ></Label>
+                    <Label Grid.Row="2" Grid.Column="2"
+            Text="20"
+             HorizontalTextAlignment="End"
+                           />
+                    <Label Grid.Row="3" Grid.Column="2"
+            Text="30"
+             HorizontalTextAlignment="End"
+                           />
+                    <Label Grid.Row="0" Grid.Column="3"
+            Text="31312"
+            FontAttributes="Bold" HorizontalTextAlignment="End"
+            />
+                    <Label Grid.Row="1" Grid.Column="3"
+            Text="ADET"
+            HorizontalTextAlignment="End" MaxLines="1"
+             />
+                    <Border Grid.Row="2" Grid.Column="3" Grid.RowSpan="2" Padding="3" Margin="2">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10,0,0,0" />
+                        </Border.StrokeShape>
+                        <Grid RowDefinitions="*" ColumnDefinitions="*,*,*">
+                            <ImageButton Grid.Column="0"
+                    HorizontalOptions="Center" VerticalOptions="Center" />
+                            <ImageButton Grid.Column="1"
+                    HorizontalOptions="Center" VerticalOptions="Center" />
+                            <ImageButton Grid.Column="2"
+                    HorizontalOptions="Center" VerticalOptions="Center" />
+                        </Grid>
+                    </Border>
+                    <BoxView Grid.Row="4" Grid.ColumnSpan="4" HeightRequest="1" VerticalOptions="End"></BoxView>
+                </Grid>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>
